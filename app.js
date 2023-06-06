@@ -123,3 +123,30 @@ console.log(timmy)
 // Have Timmy exercise twice
 timmy.exercise(2)
 console.log(timmy)
+
+
+
+// Chef should be a factory of Dinner
+// Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
+// Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
+// Have the Chef create 3 dinners, log the dinners
+
+class Dinner{
+    constructor(appetizer, entree, dessert){
+        this.appetizer = appetizer,
+        this.entree = entree,
+        this.dessert = dessert
+    }
+    chef(app, entree, dessert){
+        return newDinner(app)
+    }
+}
+
+class Chef{
+    constructor(){
+
+    }
+    newDinner(app, entree, dessert){
+        return new Dinner(app,entree,dessert)
+    }
+}
