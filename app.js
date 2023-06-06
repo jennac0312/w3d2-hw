@@ -126,7 +126,7 @@ console.log(timmy)
 
 
 
-// Chef should be a factory of Dinner
+// Chef should be a factory of Dinner ????? uhhhh what (google says that a factory returns an abject, its more secure. classes are templates for objects and is not secure.. can be altered from outside... )
 // Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
 // Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
 // Have the Chef create 3 dinners, log the dinners
@@ -137,9 +137,9 @@ class Dinner{
         this.entree = entree,
         this.dessert = dessert
     }
-    chef(app, entree, dessert){
-        return newDinner(app)
-    }
+    // chef(app, entree, dessert){
+    //     return newDinner(app)
+    // }
 }
 
 class Chef{
@@ -150,3 +150,22 @@ class Chef{
         return new Dinner(app,entree,dessert)
     }
 }
+
+// keeping these to laugh at myself... what oh what was i thinking lol
+// trying to access a method inside chef without having a chef obj ????? wow jenna wow
+
+// let dinner1 = new Chef.newDinner("fries", "burger", "cookie")
+// let dinner2 = new Chef.newDinner("moz sticks", "salad", "ice cream")
+// let dinner3 =  new Chef.newDinner("chicken", "steak", "milkshake")
+
+// console.log(dinner1)
+
+let chef = new Chef
+
+let dinner1 = chef.newDinner('fries', 'burger', 'cookie')
+let dinner2 = chef.newDinner("moz sticks", "salad", "ice cream")
+let dinner3 =  chef.newDinner("chicken", "steak", "milkshake")
+
+console.log(dinner1)
+console.log(dinner2)
+console.log(dinner3)
